@@ -1,0 +1,23 @@
+{
+    "name": "thamtech/yii2-uuid",
+    "description": "Yii 2 UUID Helper",
+    "keywords": ["yii", "yii2", "uuid", "guid"],
+    "type": "yii2-extension",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Tyler Ham",
+            "email": "tyler@thamtech.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*",
+        "ramsey/uuid": "~3.0.0",
+        "moontoast/math": "~1.1.0"
+    },
+    "autoload": {
+        "psr-4": { "thamtech\\uuid\\": "src/"}
+    }
+}
