@@ -26,7 +26,7 @@ class UuidHelper
      */
     public static function uuid()
     {
-        return Uuid::uuid4();
+        return Uuid::uuid4()->toString();
     }
     
     /**
