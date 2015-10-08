@@ -48,7 +48,7 @@ $uuid = 'not-a-uuid';
 $isValid = \thamtech\uuid\helpers\UuidHelper::isValid($uuid); // false
 
 // or using the Validator class directly
-$validator = new thamtech\uuid\validators\UuidValidator();
+$validator = new \thamtech\uuid\validators\UuidValidator();
 if ($validator->validate($uuid, $error)) {
     // valid
 } else {
@@ -75,4 +75,4 @@ See Also
 
 * [ramsey/uuid](http://github.com/ramsey/uuid)
 
-* [universally unique identifiers](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+* [Universally unique identifiers](https://en.wikipedia.org/wiki/Universally_unique_identifier)
