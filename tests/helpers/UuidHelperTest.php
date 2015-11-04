@@ -15,7 +15,7 @@ class UuidHelperTest extends \thamtechunit\uuid\TestCase
 
     public function testUuid()
     {
-        $val = new UuidValidator;
+        $val = new UuidValidator();
 
         $uuid = UuidHelper::uuid();
         $this->assertTrue($val->validate($uuid));
