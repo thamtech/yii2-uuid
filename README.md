@@ -9,6 +9,12 @@ generate
 
 For license information check the [LICENSE](LICENSE.md)-file.
 
+[![Latest Stable Version](https://img.shields.io/packagist/v/thamtech/yii2-uuid.svg)](https://packagist.org/packages/thamtech/yii2-uuid)
+[![Build Status](https://img.shields.io/travis/thamtech/yii2-uuid.svg)](https://travis-ci.org/thamtech/yii2-uuid)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/thamtech/yii2-uuid.svg)](https://scrutinizer-ci.com/g/thamtech/yii2-uuid/)
+[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/thamtech/yii2-uuid.svg)](https://scrutinizer-ci.com/g/thamtech/yii2-uuid/)
+
+
 Installation
 ------------
 
