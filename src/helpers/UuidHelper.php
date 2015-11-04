@@ -1,7 +1,7 @@
 <?php
 /*
  * Copyright (C) 2015 Thamtech, LLC
- * 
+ *
  * This software is copyrighted. No part of this work may be
  * reproduced in whole or in part in any manner without the
  * permission of the Copyright owner, unless specifically authorized
@@ -14,15 +14,15 @@ use Ramsey\Uuid\Uuid;
 
 /**
  * UuidHelper provides UUID functions that you can use in your application.
- * 
+ *
  * @author Tyler Ham <tyler@thamtech.com>
  */
 class UuidHelper
 {
     /**
      * Generate a UUID string (version 4 by default).
-     * 
-     * @return string canonical format UUID, i.e. 25769c6c-d34d-4bfe-ba98-e0ee856f3e7a 
+     *
+     * @return string canonical format UUID, i.e. 25769c6c-d34d-4bfe-ba98-e0ee856f3e7a
      */
     public static function uuid()
     {
@@ -33,9 +33,9 @@ class UuidHelper
      * Checks if the given string looks like a UUID in the canonical format,
      * i.e. 25769c6c-d34d-4bfe-ba98-e0ee856f3e7a. This check is case
      * insensitive.
-     * 
+     *
      * @param  string  $uuid UUID String to check
-     * 
+     *
      * @return bool       whether or not it matches the pattern.
      */
     public static function isValid($uuid)
@@ -47,15 +47,15 @@ class UuidHelper
 
     /**
      * Converts a UUID string into a compact binary string.
-     * 
+     *
      * @param  string $uuid UUID in canonical format, i.e. 25769c6c-d34d-4bfe-ba98-e0ee856f3e7a
-     * 
+     *
      * @return string compact 16-byte binary representation of the UUID.
      */
     public static function uuid2bin($uuid)
     {
         // normalize to uppercase, remove hyphens
-        $hex = str_replace('-', '', strupper($uuid));
+        $hex = str_replace('-', '', strtoupper($uuid));
 
         $bin = pack('H*', $hex); // H for big-endian to behave similar to MySQL's
                                  // HEX() and UNHEX() functions.
@@ -66,9 +66,9 @@ class UuidHelper
     /**
      * Converts a compact 16-byte binary representation of the UUID into
      * a string in canonical format, i.e. 25769c6c-d34d-4bfe-ba98-e0ee856f3e7a.
-     * 
+     *
      * @param  string $uuidBin compact 16-byte binary representation of the UUID.
-     * 
+     *
      * @return string UUID in canonical format, i.e. 25769c6c-d34d-4bfe-ba98-e0ee856f3e7a
      */
     public static function bin2uuid($uuidBin)
@@ -76,7 +76,7 @@ class UuidHelper
         $hexArray = unpack('H*', $uuidBin); // H for big-endian to behave similar to MySQL's
                                             // HEX() and UNHEX() functions.
 
-        $hex = strtolower(array_shift($hexArr));
+        $hex = strtolower(array_shift($hexArray));
 
         // break into components
         $components = [
