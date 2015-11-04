@@ -28,7 +28,7 @@ class UuidHelper
     {
         return Uuid::uuid4()->toString();
     }
-    
+
     /**
      * Checks if the given string looks like a UUID in the canonical format,
      * i.e. 25769c6c-d34d-4bfe-ba98-e0ee856f3e7a. This check is case
@@ -44,7 +44,7 @@ class UuidHelper
 
         return $validator->validate($uuid, $error);
     }
-    
+
     /**
      * Converts a UUID string into a compact binary string.
      * 
@@ -56,13 +56,13 @@ class UuidHelper
     {
         // normalize to uppercase, remove hyphens
         $hex = str_replace('-', '', strupper($uuid));
-        
+
         $bin = pack('H*', $hex); // H for big-endian to behave similar to MySQL's
                                  // HEX() and UNHEX() functions.
 
         return $bin;
     }
-    
+
     /**
      * Converts a compact 16-byte binary representation of the UUID into
      * a string in canonical format, i.e. 25769c6c-d34d-4bfe-ba98-e0ee856f3e7a.
@@ -77,7 +77,7 @@ class UuidHelper
                                             // HEX() and UNHEX() functions.
 
         $hex = strtolower(array_shift($hexArr));
-        
+
         // break into components
         $components = [
           substr($hex, 0, 8),
@@ -86,7 +86,7 @@ class UuidHelper
           substr($hex, 16, 4),
           substr($hex, 20, 12),
         ];
-        
+
         return implode('-', $components);
     }
 }

@@ -5,7 +5,6 @@ $finder = Symfony\CS\Finder\DefaultFinder::create()
 
 return Symfony\CS\Config\Config::create()
     ->fixers([
-        '-whitespacy_lines',
         '-phpdoc_separation',
         '-blankline_after_open_tag',
         '-phpdoc_inline_tag',
