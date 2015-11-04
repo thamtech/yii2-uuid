@@ -57,8 +57,9 @@ class UuidHelper
         // normalize to uppercase, remove hyphens
         $hex = str_replace('-', '', strtoupper($uuid));
 
-        $bin = pack('H*', $hex); // H for big-endian to behave similar to MySQL's
-                                 // HEX() and UNHEX() functions.
+        // H for big-endian to behave similarly to MySQL's
+        // HEX() and UNHEX() functions.
+        $bin = pack('H*', $hex);
 
         return $bin;
     }
@@ -73,8 +74,9 @@ class UuidHelper
      */
     public static function bin2uuid($uuidBin)
     {
-        $hexArray = unpack('H*', $uuidBin); // H for big-endian to behave similar to MySQL's
-                                            // HEX() and UNHEX() functions.
+        // H for big-endian to behave similarly to MySQL's
+        // HEX() and UNHEX() functions.
+        $hexArray = unpack('H*', $uuidBin);
 
         $hex = strtolower(array_shift($hexArray));
 
