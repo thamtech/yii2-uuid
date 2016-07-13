@@ -63,6 +63,31 @@ if ($validator->validate($uuid, $error)) {
 }
 ```
 
+Or you can include the `use` lines, especially if you will be making multiple
+uuid calls within a file:
+
+```php
+use thamtech\uuid\helpers\UuidHelper;
+use thamtech\uuid\helpers\UuidValidator;
+
+// ...
+
+$uuid = 'de305d54-75b4-431b-adb2-eb6b9e546014';
+$isValid = UuidHelper::isValid($uuid); // true
+
+$uuid = 'not-a-uuid';
+$isValid = UuidHelper::isValid($uuid); // false
+
+// or using the Validator class directly
+$validator = new UuidValidator();
+if ($validator->validate($uuid, $error)) {
+    // valid
+} else {
+    // not valid
+    echo $error
+}
+```
+
 ## Field Validation
 
 Incorporate this same validation into your model:
