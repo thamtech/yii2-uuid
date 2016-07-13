@@ -4,3 +4,8 @@ imports:
 tools:
     external_code_coverage:
         timeout: 2100 # Timeout in seconds.
+
+checks:
+    php:
+        code_rating: true
+        duplication: true
