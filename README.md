@@ -3,7 +3,7 @@ Yii 2 UUID Helper
 
 UUID Helper and validator for Yii 2.
 
-This library interfaces with [ramsey/uuid](http://github.com/ramsey/uuid) to
+This library interfaces with [ramsey/uuid](https://github.com/ramsey/uuid) to
 generate 
 [universally unique identifiers](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
@@ -18,7 +18,7 @@ For license information check the [LICENSE](LICENSE.md)-file.
 Installation
 ------------
 
-The preferred way to install this extensions is through [composer](http://getcomposer.org/download/).
+The preferred way to install this extensions is through [composer](https://getcomposer.org/download/).
 
 Either run
 ```
@@ -104,6 +104,6 @@ public function rules()
 See Also
 --------
 
-* [ramsey/uuid](http://github.com/ramsey/uuid)
+* [ramsey/uuid](https://github.com/ramsey/uuid)
 
 * [Universally unique identifiers](https://en.wikipedia.org/wiki/Universally_unique_identifier)
