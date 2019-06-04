@@ -25,6 +25,7 @@ cache:
 
 install:
   - travis_retry composer self-update && composer --version
+  - if [ -n "$GITHUB_TOKEN" ]; then composer config github-oauth.github.com ${GITHUB_TOKEN}; fi;
   - travis_retry composer global require "fxp/composer-asset-plugin:~1.4.2"
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
   - travis_retry composer install --prefer-dist --no-interaction
